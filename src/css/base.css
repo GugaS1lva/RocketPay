@@ -57,15 +57,28 @@ body {
 }
 
 span h4{
-  margin-bottom: 13px;
+  margin: 20px 0 10px 0;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.01px;
+  text-transform: uppercase;
+  color: #e1e1e6;
 }
 
 span ul{
   list-style: none;
   font-size: 13px;
   font-family: 'Roboto Mono', monospace;
-  color: #77777A;
-  width: 300px;
+  color: #adadad;
+  width: 320px;
+
+  background-color: #121214;
+  border: 1px solid #323238;
+  border-radius: 6px;
+  padding-inline: 1.2rem;
+  padding: 1.2rem;
+  text-transform: uppercase;
 }
 
 span ul li strong{
