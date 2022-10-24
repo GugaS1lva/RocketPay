@@ -74,3 +74,62 @@ Propriedade dispatch >>>
     - filtragem pra pegar somente números
     - uso do .find() pra encontrar algo. Esse .find() vai fazer a execução de uma função anônima, procurando um número que se estiver batendo com o regex, retornará a própria máscara encontrada, se não, não retorna.
 "
+
+
+======================================================================================================================
+const cardsDynamicMasks = [
+    {
+        mask: '0000 000000 00000',
+        regex: /^3[47]\d{0,13}/,
+        cardtype: 'american express'
+        # /^3[4-7]\d{0,13}/
+    },
+    
+    {
+        mask: '0000 0000 0000 0000',
+        regex: /^(?:6011|65\d{0,2}|64[4-9]\d?)\d{0,12}/,
+        cardtype: 'discover'
+        # /^65[4-9][0-9]{13}|64[4-9][0-9]{13}|6011[0-9]{12}|(622(?:12[6-9]|1[3-9][0-9]|[2-8][0-9][0-9]|9[01][0-9]|92[0-5])[0-9]{10})$/
+    },
+    {
+        mask: '0000 000000 0000',
+        regex: /^3(?:0([0-5]|9)|[689]\d?)\d{0,11}/,
+        cardtype: 'diners'
+    },
+    {
+        mask: '0000 0000 0000 0000',
+        regex: /^(5[1-5]\d{0,2}|22[2-9]\d{0,1}|2[3-7]\d{0,2})\d{0,12}/,
+        cardtype: 'mastercard'
+    },
+    {
+        mask: '0000 000000 00000',
+        regex: /^(?:2131|1800)\d{0,11}/,
+        cardtype: 'jcb15'
+    },
+    {
+        mask: '0000 0000 0000 0000',
+        regex: /^(?:35\d{0,2})\d{0,12}/,
+        cardtype: 'jcb'
+    },
+    {
+        mask: '0000 0000 0000 0000',
+        regex: /^(?:5[0678]\d{0,2}|6304|67\d{0,2})\d{0,12}/,
+        cardtype: 'maestro'
+    },
+    {
+        mask: '0000 0000 0000 0000',
+        regex: /^4\d{0,15}/,
+        cardtype: 'visa'
+    },
+    {
+        mask: '0000 0000 0000 0000',
+        regex: /^62\d{0,14}/,
+        cardtype: 'unionpay'
+    },
+]
+
+SITE DAS CARD REGRAS
+https://stackoverflow.com/questions/9315647/regex-credit-card-number-tests
+
+SITE DOS LOGOS
+https://worldvectorlogo.com/

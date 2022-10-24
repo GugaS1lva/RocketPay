@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* font-family: 'Roboto Mono', monospace; */
+
 * {
   margin: 0;
   padding: 0;
@@ -44,9 +47,27 @@ body {
   background: #202024;
   border: 0.1rem solid #323238;
   border-radius: 0.6rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 #app header {
   display: flex;
   align-items: center;
+}
+
+span h4{
+  margin-bottom: 13px;
+}
+
+span ul{
+  list-style: none;
+  font-size: 13px;
+  font-family: 'Roboto Mono', monospace;
+  color: #77777A;
+  width: 300px;
+}
+
+span ul li strong{
+  color: #adadad;
 }

@@ -10,8 +10,13 @@ function setCardType(type) {
     const colors = {
         visa: ['#17283A', '#D9BB7D'],
         mastercard: ['#E3001A', '#EF991B'],
-        // nubank: ['#7E0ACA', '#8605B8'],
-        // neon: ['#11A9F3', '#12DCDF'],
+        americanExpress: ['#D6E5DE', '#ACBBB2'],
+        discover: ['#F7A027', '#82310F'],
+        dinners: ['#A01111', '#270B0E'],
+        jcb: ['#1C0E0B', '#DEB758'],
+        unionpay: ['#8EFCEF', '#B81532'],
+        nubank: ['#7E0ACA', '#8605B8'],
+        neon: ['#11A9F3', '#12DCDF'],
         default: ['black', 'gray'],
     }
 
@@ -62,17 +67,47 @@ const cardNumberPattern = {
             cardtype: "mastercard",
         },
 
-        // {
-        //     mask: "0000 0000 0000 0000",
-        //     regex: /^4\d{0,15}/,
-        //     cardtype: "nubank",
-        // },
+        {
+            mask: "0000 0000 0000 0000",
+            regex: /^3[4-7]\d{0,13}/,
+            cardtype: "americanExpress",
+        },
 
-        // {
-        //     mask: "0000 0000 0000 0000",
-        //     regex: /^4\d{0,15}/,
-        //     cardtype: "neon",
-        // },
+        {
+            mask: "0000 0000 0000 0000",
+            regex: /^65[4-9][0-9]{13}|64[4-9][0-9]{13}|6011[0-9]{12}|(622(?:12[6-9]|1[3-9][0-9]|[2-8][0-9][0-9]|9[01][0-9]|92[0-5])[0-9]{10})$/,
+            cardtype: "discover",
+        },
+
+        {
+            mask: "0000 0000 0000 0000",
+            regex: /^3(?:0([0-5]|9)|[689]\d?)\d{0,11}/,
+            cardtype: "dinners",
+        },
+
+        {
+            mask: "0000 0000 0000 0000",
+            regex: /^(?:2131|1800|35\d{3})\d{11}$/,
+            cardtype: "jcb"
+        },
+
+        {
+            mask: "0000 0000 0000 0000",
+            regex: /^62\d{0,14}/,
+            cardtype: "unionpay"
+        },
+
+        {
+            mask: "0000 0000 0000 0000",
+            regex: /^8\d{0,15}/,
+            cardtype: "nubank",
+        },
+
+        {
+            mask: "0000 0000 0000 0000",
+            regex: /^9\d{0,15}/,
+            cardtype: "neon",
+        },
 
         {
             mask: "0000 0000 0000 0000",
