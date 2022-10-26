@@ -128,6 +128,10 @@ const cardsDynamicMasks = [
     },
 ]
 
+SITE DAS MÁSCARAS
+[JS] https://imask.js.org/guide.html
+[REACT] https://www.npmjs.com/package/react-imask
+
 SITE DAS CARD REGRAS
 https://stackoverflow.com/questions/9315647/regex-credit-card-number-tests
 
